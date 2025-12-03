@@ -1,0 +1,26 @@
+{
+  "name": "Blueberry - Premium Adult Streaming",
+  "short_name": "Blueberry",
+  "description": "Your premium destination for adult entertainment with a modern, elegant streaming experience.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f14",
+  "theme_color": "#3b82f6",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["entertainment", "video"],
+  "lang": "en-US"
+}

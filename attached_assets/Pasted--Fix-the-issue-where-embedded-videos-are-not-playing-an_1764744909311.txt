@@ -1,0 +1,77 @@
+**"Fix the issue where embedded videos are not playing and resolve all non-functional playback features.
+
+Implement 10+ required new screens, 10+ new core features, 10+ gesture-based interaction features, 10+ video playback enhancements, and 10+ dedicated video-playback gesture features.
+Do not include any premium/subscription or creator-related screens and features.
+
+Add video quality selection, high-quality audio support, and high-resolution video playback.
+
+Complete the full Firebase setup, including authentication, user database, and required backend configurations.
+❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDEBvzh8F4iIAG9NRlZT0ZQEgWHdgOPVzM",
+  authDomain: "blue-berry-748cb.firebaseapp.com",
+  databaseURL: "https://blue-berry-748cb-default-rtdb.firebaseio.com",
+  projectId: "blue-berry-748cb",
+  storageBucket: "blue-berry-748cb.firebasestorage.app",
+  messagingSenderId: "250482902334",
+  appId: "1:250482902334:web:02dfd510b6cca2ed96986f",
+  measurementId: "G-8142DGS5WG"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+var admin = require("firebase-admin");
+
+var serviceAccount = require("path/to/serviceAccountKey.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://blue-berry-748cb-default-rtdb.firebaseio.com"
+});
+❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+{
+  "type": "service_account",
+  "project_id": "blue-berry-748cb",
+  "private_key_id": "624de43f021c9b381e9bfb97e10fe817870b3c9f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC2CIFXDG4fbDIe\nbb234xl51HFUAL64gCLGlKV2lsKab3X34GPS1Z2/OLJRLHTejGX8MSFy4czAUF8t\n/wbUJje2+Zx95+qLCLZM5oHmdXfZMeW8Dvil8oidimqhuxkpXEW1PCtb70eG/GTL\nFXCCchJhgZruAD8mQCml7ffoPyYHbGgkjUx0AWSe+pzNaps1z0uT1j/rKv9/O2jW\nmG028UBDo/vRJS08UoRSfe+9W3yUpa0huHMwJFQN9gNZbB4no1DuUNR5t8a+hIlJ\nfxZQQns7lgBLR+8lRKfbQ88aStDamDyAkVkaDOhHuxvBdP/tBLICtLSWcXRfGFe1\nfq7hAjkRAgMBAAECggEAEI9RhOPCmOU04gPFwJbOWID1FllDAHHXuA0JyHIKnhYJ\nu1UUf7ejNCQqRKwwrZZEKN8nVdYo1E37eqm6q04Wv3SRwfp5IdDXFMPbiWWiU4Xw\nil0qTZ50wzA2ZyQoM9ULGmOw5hosfaE0Yi0/IP7ToT8zIveuxwILR+cQKHamNQKG\nGmokdESj/JkFesdB4LIGS2/WeurfEVY8wT6qGbJCAw78HFLfH6MB3mxrGS67syt5\ndK92heO/FUSviFtuHlfHCujNwf5hq1SU8q3u88aMT9ots8MVpD2VhDXdK7IPi6cE\nl0cuOfhuni7DM2yh65BPYcXSYdWBkN28HkNgqD4ICQKBgQD0ZqKJ1EQ3Ydaorzxf\nwsJjNFRZAaGwVlON+cF6ZMrQPfyRZFpXKMX5ZO0uMvyXKk/Ls7JkRBJvm0/zeI7F\n3kwJFYthr0NVB1rVJTpRVtpkWQslbQiPh7P9pDacag6KNM2N4HlOf7q3o3akxXIy\n7HW7F/7xWCWK1ycC2pzCMFMagwKBgQC+rCFBRnctA481/ovPavtun076+Z+NU3Hb\nDoBpktffWStx1xDvj2DaN5RMKdoXkmPEDYtJsKGb7IS1D7ZWEDyvYpxe1UT39DX4\n4AtVWKp3/rBnBbegkVFiQj4Aug73IzvxmM3dYckazW3iUqsP+l2LZR6GtvV1qqrI\ntBZxIRFZ2wKBgQCj7Lc2RQZgMyJcT/TpseLZ0T6F2H9PnAc84fjwk+woknr2Nd4W\nOcXXyeb/prke1wVgdq2/bJ0E+KI+hm0UsE5FhYrQQVKjFGTLM8YSynN+/O5p8uDc\nDEQgauUqMkSAVHxOnfIfQbLF+0DXsYswNsOccrLPw7SilD6ZPnIIGYuT6wKBgCPS\nAo1Yx5rVSFpEb8+PsZyeoR/VNXw/aOxWVRmAVL3I6riARtY6gV99gYatdiNnhQaX\n5Mr7O+EnFedOBFs2wa/RPr8yIbrTTjBrJrXp6lyQpGM2V8D6i+eBulQ4oAcdv20r\n38DvVfCLF1GlZi2iQ2Ckpo94X7SzU1JRQsYOCExxAoGAGEQEzcAboFivvT2zbkvh\nTucNJdMF2Ua3xefHSyFbWsXK/SyF2234P6+YghFM2hgDlQefzB/kmCR5PeRiKt/I\nwN0jQ10YHz8YEhVkmzdE9/WpVYgeHHVyGGGAAxM+DAG9MnX0yFedZy1NIFYCeN4A\nX4SmeLbr1QTMJBS8y6RbZSY=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@blue-berry-748cb.iam.gserviceaccount.com",
+  "client_id": "101792967252039798898",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40blue-berry-748cb.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
+
+❤️❤️❤️❤️
+Review the entire project and implement all missing screens, features, UI/UX components, and functional requirements."**
+
+
+complete system behavior for every screen, feature, UI component, and interaction across the entire project.
+Include all provided details and A to N points below:
+
+A. Conditional logic (all if–else scenarios)
+B. Workflows and overall logic flow
+C. How each feature works
+D. Logic-based behaviors and interaction rules
+E. Navigation flow between screens
+F. App rules and restrictions
+G. Terms, conditions, and usage behaviors
+H. Full working mechanisms
+I. Performance optimization strategy
+J. Security and permission management
+K. Notification logic and system behavior
+L. Permission handling
+M. Error handling and error-state behavior
+N. How users navigate and how the UI reacts to their actions.
+Error State and empty State, database.****
