@@ -27,6 +27,9 @@ COPY --from=builder /app/dist ./dist
 # Copy package files to install production dependencies
 COPY package.json package-lock.json ./
 
+# Copy data directory (required for server startup)
+COPY data ./data
+
 # Install only production dependencies
 # This is necessary because script/build.ts externalizes some dependencies
 RUN npm ci --production
