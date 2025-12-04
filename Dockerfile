@@ -33,13 +33,11 @@ RUN npm ci --production
 
 # Set environment variables
 ENV NODE_ENV=production
-# Set default PORT to 3000 as requested
-ENV PORT=3000
 
-# Expose port 3000
-EXPOSE 3000
+# Expose port 5000 (default)
+EXPOSE 5000
 
 # Start the server
-# The server code listens on process.env.PORT.
-# If Railway provides a PORT env var, it will override the ENV PORT=3000.
-CMD ["node", "dist/index.cjs"]
+# Use shell form to allow PORT expansion with default fallback
+# This ensures Railway's PORT env var is respected, falling back to 5000 locally
+CMD ["sh", "-c", "PORT=${PORT:-5000} node dist/index.cjs"]
